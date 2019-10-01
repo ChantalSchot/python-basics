@@ -328,3 +328,29 @@ need 3 quotation marks"""
 # print(longList[::5])
 # print(longList[11:1:-3])
 # print(longList[::-1])
+
+"""Try and except-statements: avoid crashing the program"""
+# ex1 = input("What is my favourite integer?")
+# try:
+#     if int(ex1) == 7:
+#         print("Indeed, 7 is my favourite integer!")
+#     else:
+#         print("That is not my favourite integer")
+# except: #if no integer is entered (e.g. a string/float variable), the program would normally crash, but not with 'except' statement.
+#     print("Please re-run the program and enter an integer.")
+
+# Exercises:
+from random import randint
+randomInt = randint(0, 5)
+print(randomInt)
+userInt = input("enter an integer.")
+
+try:
+    if int(userInt) > randomInt:
+        print(userInt, "- your integer is larger than the random integer:", randomInt)
+    elif int(userInt) < randomInt:
+        print(randomInt, "- the random integer is larger than", userInt)
+    else:
+        print("Both integers are the same:", randomInt)
+except:
+    print("Please run the program again and enter an integer.")
